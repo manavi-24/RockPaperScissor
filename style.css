@@ -120,4 +120,8 @@ body{
         flex-direction: column;
         gap: 20px;
     }
+    #msg{
+        font-size: 13px;
+        padding:5px;
+    }
 }
