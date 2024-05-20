@@ -3,7 +3,7 @@ let compScore=0;
 let choices=document.querySelectorAll(".choice");
 let msg=document.querySelector("#msg");
 let userScorePara=document.querySelector("#userscore");
-let compScorePara=document.querySelector("#compscore");
+let compScorePara=document.querySelector("#computerscore");
 
 let genCompChoice=()=>{
     let options=['rock','paper','scissors'];
@@ -12,7 +12,7 @@ let genCompChoice=()=>{
 };
 
 let showWinner = (userWin, userChoice, compChoice) => {
-    if(userWin='true'){
+    if(userWin===true){
         userScore++;
         userScorePara.innerHTML=userScore;
         msg.innerHTML=`${userChoice} beats ${compChoice}. You win!`;
@@ -55,22 +55,6 @@ choices.forEach(choice=>{
     });
 });
 
-/*let playgame=(userChoice)=>{
-    let compChoice=genCompChoice();
-    if(userChoice===compChoice){
-        drawGame();
-    }
-    else{
-        let userWin=true;
-        if(userChoice==='rock'){
-           userWin=compChoice==='paper'?false:true;}
-           else if(userChoice==='paper'){
-            userWin=compChoice==='scissors'?false:true;}
-            else if(userChoice==='scissors'){
-                userWin=compChoice==='rock'?false:true;}
-        showWinner(userWin,userChoice,compChoice);
-    }
-    
-};*/
+
 
 
